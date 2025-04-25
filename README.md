@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Teslo Shop
 
-## Getting Started
+Teslo Shop es una aplicación de comercio electrónico construida con **Next.js** y **Prisma**. Este proyecto incluye autenticación, gestión de productos, y un sistema de carrito de compras.
 
-First, run the development server:
+## Tabla de Contenidos
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- [Requisitos Previos](#requisitos-previos)
+- [Instalación](#instalación)
+- [Uso](#uso)
+- [Tecnologías](#tecnologías)
+- [Licencia](#licencia)
+
+## Requisitos Previos
+
+Asegúrate de tener instalados los siguientes programas:
+
+- [Node.js](https://nodejs.org/)
+- [Docker](https://www.docker.com/)
+- [Docker Compose](https://docs.docker.com/compose/)
+
+## Instalación
+
+Sigue estos pasos para configurar el proyecto en tu máquina local:
+
+1. Clona el repositorio:
+
+   ```bash
+   git clone https://github.com/tu-usuario/teslo-shop.git
+   cd teslo-shop
+   ```
+
+2. Instala las dependencias:
+
+   ```bash
+   npm install
+   ```
+
+3. Copia el archivo de configuración `.env.template` y renómbralo a `.env`:
+
+   ```bash
+   cp .env.template .env
+   ```
+
+4. Levanta la base de datos con Docker:
+
+   ```bash
+   docker-compose up -d
+   ```
+
+5. Ejecuta las migraciones de Prisma:
+
+   ```bash
+   npx prisma migrate dev
+   ```
+
+6. Llena la base de datos con datos iniciales (opcional) (solo para desarrollo):
+
+   ```bash
+   npm run seed
+   ```
+
+7. Inicia el servidor de desarrollo:
+
+   ```bash
+   npm run dev
+   ```
+
+## Uso
+
+Una vez que el servidor esté corriendo, abre tu navegador y accede a:
+
+```
+http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Desde aquí podrás explorar la tienda, gestionar productos y realizar pruebas.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tecnologías
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Este proyecto utiliza las siguientes tecnologías destacadas:
 
-## Learn More
+- **Next.js**: Framework de React para aplicaciones web.
+- **Prisma**: ORM para manejar la base de datos.
+- **PostgreSQL**: Base de datos relacional.
+- **TypeScript**: Tipado estático para JavaScript.
+- **Tailwind CSS**: Framework de estilos para diseño responsivo.
+- **Zustand**: Librería para manejo de estado.
+- **Better Auth**: Autenticación para Next.js.
+- **PayPal**: Integración de pagos.
+- **React Hook Form**: Manejo de formularios en React.
+- **Cloudinary**: Gestión de imágenes y recursos multimedia.
+- **Swiper.js**: Carruseles interactivos.
+- **Docker**: Contenedores para la base de datos y servicios.
 
-To learn more about Next.js, take a look at the following resources:
+## Licencia
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Este proyecto está licenciado bajo la [MIT License](LICENSE).
