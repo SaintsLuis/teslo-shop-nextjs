@@ -25,7 +25,7 @@ Sigue estos pasos para configurar el proyecto en tu máquina local:
 1. Clona el repositorio:
 
    ```bash
-   git clone https://github.com/tu-usuario/teslo-shop.git
+   git clone https://github.com/SaintsLuis/teslo-shop-nextjs
    cd teslo-shop
    ```
 
